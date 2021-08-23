@@ -1,0 +1,69 @@
+.iamges {
+  width: 100%;
+  height: 400px;
+  /* background-image: url(../../assets/mohammed-v1-MH_2.jpg); */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.top-left{
+  border-radius: 0px 25px 0px 0px;
+  background: #5f249f;
+  padding: 20px; 
+  width: 400px;
+  height: 150px;  
+}
+.ccaarrdd {
+  border: 1px solid #d3d3d3;
+  border-left: 6px solid #5f249f;
+  margin-left: 10px;
+}
+.ccaarrdd:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+h1:hover {
+  color: #5f249f;
+}
+.oimg {
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .oimg {
+    width: 150px;
+  }
+}
+
+.ccaarrdd a {
+  color: #000;
+}
+.ccaarrdd:hover a {
+  color: #5f249f;
+  text-decoration: none;
+}
+.crd-ctn {
+  background-color: #5f249f;
+  color: #ffffff !important;
+  padding: 10px 20px;
+  border: 2px solid #5f249f;
+}
+.crd-ctn:hover {
+  background: #ffffff;
+  color: #5f249f !important;
+}
+.btncarr {
+  padding: 10px 14px;
+  color: #5f249f;
+  background: #ffffff;
+  border: 2px solid #5f249f;
+  border-right: 0px;
+  font-size: 0.9rem;
+}
+
+.btncarr:last-child {
+  border-right: 2px solid #5f249f;
+}
+.activebtn {
+  background-color: #5f249f;
+  color: #ffffff;
+}

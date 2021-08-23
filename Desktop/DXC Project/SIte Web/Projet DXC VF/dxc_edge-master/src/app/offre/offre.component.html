@@ -1,0 +1,49 @@
+<div class="iamges" style="background-image: linear-gradient(to left,transparent, rgb(5, 4, 4) 100%), url({{this.service.host+this.card.card?.url}});" *ngIf="card">
+    <div class="top-leftt"><strong>{{titre}} </strong> </div>
+</div>
+<div class="container" *ngIf="offre">
+    <div class="row">
+        <div class="col-lg-9 col-12 my-3 order-lg-first order-last">
+            <p class="offrepost" [innerHTML]="offre['offre'] | MarkdownToHtml"></p>
+        </div>
+        <div class="col-lg-3 col-12 mx-auto boxcard order-lg-last order-first row">
+            <div class="col-12 col-md-12 col-lg-12">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <img src="{{service.host+offre['icone'].url}}">
+                    </div>
+                    <div class="col-lg-12 my-2 col-6">
+                        <span>Ref : </span>{{offre['reference']}}
+                    </div>
+                    <div class="col-lg-12 my-2 col-6">
+                        <span>Publiée  du : </span>{{offre['publiee_du']}}<span> au : </span>{{offre['publiee_au']}}
+                    </div>
+                    <div class="col-lg-12 my-2  col-6">
+                        <span>Niveau d'expérience : </span>{{niveauexp(offre['Niveau_d_experience'])}}
+                    </div>
+                    <div class="col-lg-12 my-2  col-6">
+                        <span>Niveau d'éducation : </span>{{niveauedu(offre['niveau_d_education'])}}
+                    </div>
+                    
+                    <div class="col-lg-12 my-2  col-6">
+                        <span>Localisation : </span>{{localisation(offre['Localisation'])}}
+                    </div>
+                    <div class="col-lg-12 my-2  col-6">
+                        <span>Type de contrat : </span>{{offre['type_de_contrat']}}
+                    </div>
+                    <div class="col-lg-12  mb-md-4 my-2 mb-lg-2 col-6">
+                        <span>Nombre de poste : </span>{{offre['Nombre_de_poste']}}
+                    </div>
+                    <div class="col-lg-12 my-2 mb-md-4 my-2 mb-lg-2 col-6">
+                        <span>Postuler sur: : </span><a href="{{'mailto:'+offre['email_postulation']}}">{{offre['email_postulation']}}</a>
+                    </div>
+                    <div class="col-lg-12 my-2 mb-md-4 my-2 mb-lg-2 col-6 text-center">
+                        <p>Ou : </p>
+                        <a routerLink="/postuler/{{offre['id']}}" class="posstt">Postuler maintenant</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

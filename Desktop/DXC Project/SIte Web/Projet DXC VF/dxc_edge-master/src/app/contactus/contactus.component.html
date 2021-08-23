@@ -1,0 +1,210 @@
+<div class="iamges" style="background-image:  url({{this.service.host+this.card.card?.url}});" *ngIf="card">
+    <div class="top-left"><img class="w-100" src="{{service.host+card.caption.url}}"></div>
+
+</div>
+<div class="contactus w-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 my-2">
+                <p class="subtitle my-3">Nous vous remercions de votre intérêt pour les services de DXC au Maroc. </p>
+                <p  class="subsubsubtitle">Veuillez nous fournir les informations suivantes. Nous répondrons dans les meilleurs délais.        </p>
+            </div>
+            <div class="col-12" *ngIf="!isdone&& !isnotdone">
+                <form [formGroup]="fg" class="w-100 row">
+                    <div class="col-md-6 col-12">
+                        <div class="input-group">
+                            <input type="text" formControlName="prenom" required>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Prénom*</label>
+                            <p *ngIf="fg.controls['prenom'].touched  &&  fg.controls['prenom'].hasError('required')">
+                                Veuillez compléter ce champ.
+                              </p>
+                          </div>  
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="input-group">
+                            <input type="text" formControlName="nom" required>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Nom* </label>
+                            <p *ngIf="fg.controls['nom'].touched  && fg.controls['nom'].hasError('required')">
+                                Veuillez compléter ce champ.
+                              </p>
+                          </div> 
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="input-group">
+                            <input type="text" formControlName="email" required>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Email*</label>
+                            <p *ngIf="fg.controls['email'].touched  && (fg.controls['email'].hasError('email') || fg.controls['prenom'].hasError('required'))">
+                                Veuillez compléter ou corriger ce champ.
+                              </p>
+                          </div> 
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="input-group">
+                            <input type="text" formControlName="tel" required>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Téléphone* </label>
+                            <p *ngIf="fg.controls['tel'].touched  && fg.controls['tel'].hasError('required')">
+                                Veuillez compléter ce champ.
+                              </p>
+                          </div> 
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="input-group">
+                            <input type="text" formControlName="entreprise" required>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Entreprise / Organisation* </label>
+                            <p *ngIf="fg.controls['entreprise'].touched  && fg.controls['entreprise'].hasError('required')">
+                                Veuillez compléter ce champ.
+                              </p>
+                          </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="input-group">
+                            <input type="text" formControlName="fonction" required>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Fonction* </label>
+                            <p *ngIf="fg.controls['fonction'].touched  && fg.controls['fonction'].hasError('required')">
+                                Veuillez compléter ce champ.
+                              </p>
+                          </div>   
+                    </div>
+                    
+                    <div class="col-md-6 col-12">
+                        <div class="input-group">
+                            <select id="relation" name="relation" formControlName="relation" required>
+                                <option default>Veuillez selectionner...</option>
+                                <option value="Client">Client</option>
+                                 <option value="Salarié DXC">Salarié DXC</option>
+                                <option value="Recherche d'emploi">Recherche d'emploi</option>
+                                <option value="Partenaire">Partenaire</option>
+                                <option value="Presse">Presse / Analyste</option>
+                                <option value="Client Potentiel">Client Potentiel</option>
+                                <option value="Autre">Autre</option>
+                              </select>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Quelle est votre relation avec DXC MAROC* </label>
+                            <p *ngIf="fg.controls['relation'].touched  && fg.controls['relation'].hasError('required')">
+                                Veuillez compléter ce champ.
+                              </p>
+                          </div>  
+                    </div>
+                    
+                    <div class="col-md-6 col-12">
+                        <div class="input-group">
+
+                            <select id="suje" name="sujet" formControlName="sujet" required>
+                                <option default>Veuillez selectionner...</option>
+                                <option value="Client">Carrières & Formation</option>
+                                <option value="Salarié DXC">Évenements & Relations Partenaires</option>
+                                <option value="Recherche d'emploi">Offres & Services DXC</option>
+                                <option value="Partenaire">Services Client / Support Client</option>
+                                <option value="Autre">Autre</option>
+                              </select>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Sujet* </label>
+                            <p *ngIf="fg.controls['sujet'].touched  && fg.controls['sujet'].hasError('required')">
+                                Veuillez compléter ce champ.
+                              </p>
+                          </div>   
+                    </div>
+                    <div class="col-12">
+                        <div class="input-group">
+                            <textarea type="text" formControlName="commentaire" required cols="30" rows="10"></textarea>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Commentaire ou Question* </label>
+                            <p *ngIf="fg.controls['commentaire'].touched  && fg.controls['commentaire'].hasError('required')">
+                                Veuillez compléter ce champ.
+                              </p>
+                          </div> 
+                    </div>
+                    <div class="col-md-12 text-center my-2">
+                        <div class="row">
+                            <div class="col-md-5 col-10 diivv">
+                                <canvas #Mycanvas id="canvas">
+                                    
+                                </canvas>
+                                <img src="../../assets/images/logodxc/dxc_logo_hz_blk_rgb-XXSML.png" class="imgcaptcha">
+                            </div>
+                            <div class="col-md-1 col-2 rfr pt-2">
+                                <a (click)="clear();resetCanvas()">                    
+                                    <fa-icon [icon]="refr"></fa-icon>
+                                </a>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="input-group">
+                                    <input type="text" formControlName="captcha" required>
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label>Verification* </label>
+                                    <p *ngIf="fg.controls['captcha'].touched  && fg.controls['captcha'].hasError('required')">
+                                        Veuillez saisir le captcha.
+                                      </p>
+                                      <p *ngIf="invalidecaptcha">
+                                        Le code de confirmation est incorrecte
+                                      </p>
+                                  </div> 
+                            </div>
+                        </div>
+                         </div>
+                         <div class="col-md-6 col-none"></div>
+                    <div class="col-md-6 col-12 row">
+                        <div class="col-2 my-auto">
+                        <input type="checkbox" formControlName="accept" class="regular-checkbox">
+                        <p *ngIf="fg.controls['accept'].touched  && fg.controls['accept'].hasError('required')">
+                            Veuillez saisir le captcha.
+                          </p>
+                    </div>
+                        <div class="col-10 text-white">
+                            j'ai lu et accepter les régles d'utilisations  
+                        </div>
+                    </div>
+                    <div class="col-md-12 text-center text-md-right my-2">
+                        <p *ngIf="rmp">                                
+                            Veuillez compléter les champs.                        
+                        </p>
+                        <button class="subtn" type="submit" id="submitcap"><strong>Submit</strong></button>
+                    </div>
+                </form>
+                    
+            </div>
+            <div class="col-12 row my-5 text-center" *ngIf="isdone">
+                <div class="col-1 icn text-white">
+                    <fa-icon [icon]="donne"></fa-icon>
+                  </div>
+                  <div class="col-6">
+                  <p>Votre demmande à été envoyer.</p>
+                  <a routerLink="/">Retour</a>
+                  </div>
+            </div>
+            <div class="col-12 row" *ngIf="isnotdone">
+                <div class="col-1 icn">
+                    <fa-icon [icon]="ndonne"></fa-icon>
+                  </div>
+                  <div class="col-6">
+                  <p>Votre demmande n'été pas envoyer.</p>
+                  <a href="/contact-us">Resseyer</a>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="location justify-center">
+        <div class="row">
+          <div class="col-md-6 d-flex align-items-stretchs justify-content-center">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.8804748201806!2d-6.720936885020441!3d33.9956037281606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7404317f483cd%3A0x52507c33095c743!2sDXC%20Technology%20Maroc!5e0!3m2!1sfr!2sma!4v1622070037189!5m2!1sfr!2sma" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>          </div>
+          <div class="col-md-6 d-flex align-items-stretchs justify-content-center">
+            <iframe   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3325.9238844132647!2d-7.641258485031898!3d33.52936455255065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda62de6779d7983%3A0x1a32ff9bcdecd992!2sDXC%20Technology%20Maroc%20-%20Casanearshore!5e0!3m2!1sfr!2sma!4v1622070010544!5m2!1sfr!2sma" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>          </div>
+        </div>
+</div>

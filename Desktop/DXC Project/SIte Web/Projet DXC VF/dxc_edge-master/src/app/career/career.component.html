@@ -1,0 +1,37 @@
+<div class="iamges" style="background-image:  url({{this.service.host+this.card.card?.url}});" *ngIf="card">
+    <div class="top-left" id="container"><img class="w-100" src="{{service.host+card.caption.url}}"></div>
+</div>
+<div class="container" >
+    <div class="row" *ngIf="offres">
+        <div id="offres" class="col-12 row ccaarrdd my-2" *ngFor="let o of currentoffres">
+<div class="col-md-4 col-12 my-auto text-center">
+    <img class="oimg" src="{{service.host+o.icone.url}}">
+</div>
+<div class="col-md-8 col-12 row my-3">
+<div class="col-12">
+    <a routerLink="{{link(o['id'])}}"><h1 class="text-center">{{o.titre}}</h1>   </a>    
+<p class="ml-5">
+    {{markdownrv(o.offre)}}
+</p>
+</div>
+<div class="col-md-4 col-12 text-center">
+<fa-icon [icon]="map"></fa-icon>    {{localisation(o.Localisation)}}
+</div>
+<div class="col-md-4 col-12 text-center">
+    <fa-icon [icon]="case"></fa-icon>    {{o['type_de_contrat']}}
+</div>
+<div class="col-md-4 col-12 text-center">
+    <fa-icon [icon]="clock"></fa-icon>    {{o['publiee_au']}}
+    </div>
+    <div class="col-12 text-right mr-3">
+        <a class="crd-ctn" routerLink="{{link(o['id'])}}">Plus ></a>
+    </div>
+</div>
+        </div>
+        <div class="col-12 text-center my-4">
+            <button class="btncarr activebtn"  *ngIf="previos" (click)="pagination(currpage-1)">    <fa-icon [icon]="previcon"></fa-icon>  </button>
+            <button class="btncarr" *ngFor="let n of numbers" id="{{'page-'+n}}" [ngClass]="{'activebtn': n === 0}" (click)="pagination(n)">{{n+1}}</button>
+            <button class="btncarr activebtn" *ngIf="next" (click)="pagination(currpage+1)"><fa-icon [icon]="nexticon"></fa-icon></button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,229 @@
+.input-group {
+  position: relative;
+  margin: 20px 0px;
+}
+
+input,
+textarea {
+  font-size: 18px;
+  background-color: #5f249f;
+  color: rgb(255, 255, 255);
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.315);
+}
+textarea {
+  max-height: 100px;
+}
+select,
+option {
+  font-size: 18px;
+  background-color: #5f249f;
+  color: rgb(255, 249, 249);
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.315);
+}
+select:focus {
+  outline: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+label {
+  color: rgba(255, 255, 255, 0.315);
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.315);
+}
+select:focus ~ label,
+select:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.315);
+}
+textarea:focus ~ label,
+textarea:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.315);
+}
+
+.bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.bar:before,
+.bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: rgb(226, 224, 224);
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+  left: 50%;
+}
+
+.bar:after {
+  right: 50%;
+}
+
+input:focus ~ .bar:before,
+input:focus ~ .bar:after {
+  width: 50%;
+}
+textarea:focus ~ .bar:before,
+textarea:focus ~ .bar:after {
+  width: 50%;
+}
+.highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+input:focus ~ .highlight {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
+}
+textarea:focus ~ .highlight {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
+}
+
+/* animations */
+@-webkit-keyframes inputHighlighter {
+  from {
+    background: rgb(226, 224, 224);
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+@-moz-keyframes inputHighlighter {
+  from {
+    background: rgb(226, 224, 224);
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+@keyframes inputHighlighter {
+  from {
+    background: rgb(226, 224, 224);
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+.btnpost {
+  padding: 10px 30px;
+  color: #5f249f;
+  background: #fff;
+  border: 2px solid #fff;
+  border-radius: 10px;
+}
+
+canvas {
+  display: table;
+  background: rgb(099, 102, 106);
+  padding-top: 30px;
+  padding-left: 120px;
+  width: 100%;
+  height: 200px;
+}
+.diivv {
+  height: 120px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  canvas {
+    padding-left: 90px;
+  }
+}
+
+.rfr {
+  color: #fff;
+  font-size: xx-large;
+}
+.imgcaptcha {
+  width: 60px;
+  top: -120px;
+  position: relative;
+}
+.fullww {
+  width: 100%;
+  background: #5f249f;
+}
+.regular-checkbox {
+  -webkit-appearance: none;
+  background-color: #fafafa;
+  border: 1px solid #cacece;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+    inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 9px;
+  width: 25px;
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+}
+.regular-checkbox:active,
+.regular-checkbox:checked:active {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+    inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.regular-checkbox:checked {
+  background-color: #5f249f;
+  border: 1px solid #adb8c0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+    inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05),
+    inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+  color: #99a1a7;
+}
+.regular-checkbox:checked:after {
+  content: "\2714";
+  font-size: 14px;
+  position: absolute;
+  top: 0px;
+  left: 5px;
+  color: #fff;
+}

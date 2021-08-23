@@ -1,0 +1,28 @@
+<div class="iamges" style="background-image:  url({{this.service.host+this.card.Card?.url}});" *ngIf="card">
+    <div class="top-left"><img class="w-100" src="{{service.host+card.caption.url}}"></div>
+
+</div>
+
+      <div class="container-fluid py-5" >
+        <div class="row hidden-md-up" *ngIf="this.partenaires">
+            <div class="col-md-2"  *ngFor="let t of this.partenaires">
+                <div class="card border-light text-center" >
+                <div class="card-header text-center" t.type_de_partenaire>
+                    <img src="{{this.service.host+t.icon?.url}}" alt="icon" class="iconetab">
+                    <br>
+                    <strong>{{t.Nom}}</strong>
+                    </div>
+                <div class="card-body">
+                    <div class="row mx-auto">
+                        <div class="col-4 col-md-6" *ngFor="let p of t.certifications">
+                            <img class="logo" src="{{this.service.host+p.logo?.url}}" alt="icon" >
+                        </div>
+              
+                    </div>
+                   
+                </div>
+              </div>
+              </div>
+        
+        </div>       
+      </div>

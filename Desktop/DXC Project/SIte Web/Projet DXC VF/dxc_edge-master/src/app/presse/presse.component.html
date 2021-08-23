@@ -1,0 +1,17 @@
+<div class="container" id="post-event">
+    <div class="row" *ngIf="this.p">
+        <div class=" col-12" >
+          <h4>{{p.titre}}</h4>
+          <p class="float-md-none float-right datee" >                     
+              {{p.journaliste}}.
+              {{p.publication_date}}- Par
+              {{p.publisher}}
+  
+          </p>
+            <img class="float-md-left mb-md-0 mb-3" src="{{this.service.host+p['image']?.url}}" >
+  
+            <br>
+            <div class="post" innerHtml="{{p.article | MarkdownToHtml}} "></div>
+        </div>
+    </div>
+  </div>

@@ -1,0 +1,23 @@
+<div class="w-100 footer">
+    <div class="container">
+        <div class="row p-5">
+            <div class="col-md-4 col-12 links">
+                <p><a routerLink="/certifications">Nos Certifications & Technologies</a></p>
+                <p><a routerLink="/they-trust-us">Ils nous font Confiance</a></p>
+                <p><a routerLink="/carriares">Carrières</a></p>
+                <p><a routerLink="/contact-us">Contactez-Nous</a></p>
+            </div>
+            <div class="col-md-4 col-12 links " *ngIf="footerp">
+                <p style="color: #fff; font-weight: bolder;">Presse</p>
+                <p class="pl-3"><a href="{{link(footerp.presse1.id)}}"><fa-icon [icon]="play" class="mr-1 text-white"></fa-icon>{{footerp.presse1.titre}}</a></p>
+                <p class="pl-3"><a href="{{link(footerp.presse2.id)}}" ><fa-icon [icon]="play" class="mr-1 text-white"></fa-icon>{{footerp.presse2.titre}}</a></p>
+            </div>
+            <div class="col-md-4 col-12 text-white addrs">
+                <p style=" font-weight: bolder;">DXC Technology Maroc</p>
+                   <p>Bâtiment B9, Technopolis</p>
+                    <p>11 100, Sala Al Jadida - Maroc</p>
+                <p>Tel : +212 5 30 57 64 00</p>
+            </div>
+        </div>
+    </div>
+</div>

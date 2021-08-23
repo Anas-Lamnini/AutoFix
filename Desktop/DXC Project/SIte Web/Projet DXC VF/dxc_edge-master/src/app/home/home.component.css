@@ -1,0 +1,251 @@
+.carousel {
+  width: 100%;
+  max-height: 630px !important;
+  overflow: hidden;
+}
+.carousel-item img {
+  height: 50rem;
+}
+.img-cpt{
+  border-radius: 0px 25px 0px 0px;
+  background: #5f249f;
+  padding: 10px; 
+  width: 350px;
+  height: 60px;  
+}
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+#carouselExampleIndicators .active {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.carousel-caption {
+  top: auto;
+  left: -30%;
+  bottom: 30%;
+  -webkit-transform: translate(0, -30%);
+  -ms-transform: translate(0, -30%);
+  transform: translate(0, -30%);
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0.5;
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0.5;
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.carousel-caption {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.nuumber {
+  color: #5f249f;
+  font-size: 4rem;
+  margin: 0;
+  font-weight: 900;
+}
+.nuumber::before {
+  content: "+";
+}
+.icon-svg {
+  width: 100px;
+  height: 110px;
+}
+@media screen and (max-width: 576px) {
+  .icon-svg {
+    height: auto;
+  }
+}
+.txt-one {
+  font-size: 1rem;
+  color: #5f249f;
+  margin-top: -25px;
+  margin-bottom: 0px;
+}
+.txt-two {
+  font-size: 1rem;
+  font-weight: bolder;
+  margin: 0px auto;
+  color: #5f249f;
+}
+@media (max-width: 768px) {
+  #ambitisionIcons #Layer_2 {
+    transform: translate(-15%, -9%) scale(1.2);
+  }
+  #cloudIcon,
+  #appIcon,
+  #biIcon,
+  .cls-44,
+  #bp,
+  #dataCenterIcon,
+  #securityIcon,
+  #titleDC,
+  #titleCloud,
+  #titleAps,
+  #titleBI,
+  #titleWM,
+  #titleBP,
+  #titleSE {
+    transition: 1s;
+    transform-origin: center;
+  }
+}
+@media (max-width: 768px) {
+  #ambitisionIcons svg {
+    width: 100%;
+    height: 130vmin;
+  }
+}
+.img-serv {
+  width: 45px;
+  height: 45px;
+}
+.servitatos {
+  width: 100%;
+  height: 68px;
+}
+.srev1 {
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.srev2 {
+  color: #5f249f;
+  font-size: 0.8rem;
+}
+.bntsev {
+  padding: 7px 14px;
+  background: white;
+}
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  width: 90% !important;
+  height: 230px;
+  perspective: 1000px;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 90% !important;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card:hover .flip-card-front {
+  overflow-x: hidden;
+}
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 90% !important;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden !important;
+}
+.flip-card-back {
+  background: #ffffff; /* Remove this if you don't want the 3D effect */
+  transform: rotateY(180deg);
+  height: 100%;
+}
+
+.mymodal {
+  background: #fff;
+  width: 100% !important;
+  overflow-x: hidden;
+}
+.modal {
+  width: 100% !important;
+}
+
+.slider {
+  width: 2179px;
+  margin: auto;
+  overflow: visible;
+}
+.slider ul {
+  display: flex;
+  padding: 0;
+  animation: cambio 80s infinite linear;
+}
+.slider li {
+  padding: 0 10px;
+  list-style: none;
+}
+.slider img {
+  width: 100px;
+  height: auto !important;
+  filter: grayscale(100%);
+}
+.slider img:hover {
+  filter: none;
+}
+@keyframes cambio {
+  from {
+    margin-left: 0%;
+  }
+  to {
+    margin-left: -100%;
+  }
+}
+.img-cpt {
+  height: 300px !important;
+}
+@media screen and (max-width: 718px) {
+  .carousel-caption {
+    left: -10%;
+  }
+}
+@media screen and (max-width: 518px) {
+  .carousel-caption {
+    left: 0%;
+  }
+  .img-cpt {
+    height: 80px !important;
+  }
+}
+p {
+  color: #000;
+}
+.qsntxt {
+  color: #5f249f;
+  font-weight: bolder;
+}
+.abttxt {
+  color: #5f249f;
+  font-weight: bolder;
+}

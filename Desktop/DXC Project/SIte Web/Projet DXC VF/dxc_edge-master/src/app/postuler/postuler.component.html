@@ -1,0 +1,132 @@
+<div class="fullww text-white" *ngIf="offre" >
+    <div class="container" *ngIf="!isdone&& !isnotdone">
+        <form [formGroup]="fg" class="w-100 row frmm">
+            <div class="col-12 text-center py-4">
+                <h2>Postuler à : {{offre['titre']}}</h2>
+                <h5 style="font-weight: bolder; color:#000;">(Référence : {{offre['reference']}} )</h5>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="input-group">
+                    <input type="text" formControlName="prenom" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Prénom*</label>
+                    <p *ngIf="fg.controls['prenom'].touched  &&  fg.controls['prenom'].hasError('required')">
+                        Veuillez compléter ce champ.
+                      </p>
+                  </div>  
+                
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="input-group">
+                    <input type="text" formControlName="nom" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Nom*</label>
+                    <p *ngIf="fg.controls['nom'].touched  &&  fg.controls['nom'].hasError('required')">
+                        Veuillez compléter ce champ.
+                      </p>
+                  </div>  
+                
+            </div>
+            <div class="col-12">
+                <div class="input-group">
+                    <input type="text" formControlName="email" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Email*</label>
+                    <p *ngIf="fg.controls['email'].touched  &&  fg.controls['email'].hasError('required')">
+                        Veuillez compléter ce champ.
+                      </p>
+                  </div>  
+                
+            </div>
+            <div class="col-12 col-md-6 row ">
+                <div class="col-3  my-auto">
+                    CV :
+                </div>
+    <div class="col-9">
+        <div class="input-group">
+            <input #fileV type="file" accept="application/pdf" FormControlName="cv" multiple="false" (change)="onFileChange($event,'cv')"/>
+        </div> 
+    </div>
+            </div>
+            <div class="col-12 col-md-6 row ">
+                <div class="col-3 my-auto">
+                    Lettre de motivation :
+                </div>
+    <div class="col-9">
+        <div class="input-group">
+            <input #fileV type="file" accept="application/pdf" FormControlName="lm" multiple="false" (change)="onFileChange($event,'lm')"/>
+        </div> 
+    </div>
+            </div>
+            <div class="col-12 text-center my-2">
+                <div class="row">
+                    <div class="col-md-5 col-10 diivv">
+                        <canvas #Mycanvas id="canvas">
+                        </canvas>
+                        <img src="../../assets/images/logodxc/dxc_logo_hz_blk_rgb-XXSML.png" class="imgcaptcha">
+                    </div>
+                    <div class="col-md-1 col-2 rfr pt-2">
+                        <a (click)="clear();resetCanvas()">                    
+                            <fa-icon [icon]="refr"></fa-icon>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="input-group">
+                            <input type="text" formControlName="captcha" required>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Verification* </label>
+                            <p *ngIf="fg.controls['captcha'].touched  && fg.controls['captcha'].hasError('required')">
+                                Veuillez saisir le captcha.
+                              </p>
+                              <p *ngIf="invalidecaptcha">
+                                Le code de confirmation est incorrecte
+                              </p>
+                          </div> 
+                    </div>
+                </div>
+                 </div>
+                 <div class="col-md-6 col-none"></div>
+                    <div class="col-md-6 col-12 row">
+                        <div class="col-2 my-auto">
+                        <input type="checkbox" formControlName="accept" class="regular-checkbox">
+                        <p *ngIf="fg.controls['accept'].touched  && fg.controls['accept'].hasError('required')">
+                            Veuillez saisir le captcha.
+                          </p>
+                    </div>
+                    <div class="col-10 text-white">
+                        j'ai lu et accepter les régles d'utilisations  
+                    </div>
+                    </div>
+        </form>
+        <div class="row">
+<div class="col-12 text-right py-3 pr-5">
+    <p *ngIf="rmp">                                
+        Veuillez compléter les champs.                        
+    </p>
+    <button class="btnpost" id="submitcap">Envoyer</button>
+</div>
+    </div>
+    </div>
+    <div class="col-12 row py-5 text-center" *ngIf="isdone">
+        <div class="col-1 icn text-white my-5">
+            <fa-icon [icon]="donne"></fa-icon>
+          </div>
+          <div class="col-6 my-5">
+          <p>Votre demmande à été envoyer.</p>
+          <a routerLink="/">Retour</a>
+          </div>
+    </div>
+    <div class="col-12 row" *ngIf="isnotdone">
+        <div class="col-1 icn">
+            <fa-icon [icon]="ndonne"></fa-icon>
+          </div>
+          <div class="col-6">
+          <p>Votre demmande n'été pas envoyer.</p>
+          <a href="/contact-us">Resseyer</a>
+          </div>
+    </div>
+</div>

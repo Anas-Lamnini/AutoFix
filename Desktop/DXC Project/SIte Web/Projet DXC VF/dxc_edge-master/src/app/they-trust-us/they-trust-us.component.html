@@ -1,0 +1,27 @@
+<div class="iamges" style="background-image: linear-gradient(to left,transparent, rgb(5, 4, 4) 100%), url({{this.service.host+this.card.card?.url}});" *ngIf="card">
+    <div class="top-left"><img class="w-100" src="{{service.host+card.caption.url}}"></div>
+
+</div>
+
+      <div class="container py-5" >
+        <div class="row hidden-md-up" *ngIf="this.partenaires">
+            <div class="col-md-3"  *ngFor="let t of this.partenaires">
+                <div class="card border-light " >
+                <div class="card-header" t.type_de_partenaire>
+                    <img src="{{this.service.host+t.Logo?.url}}" alt="icon" class="iconetab">
+                    {{t.Nom}}
+                    </div>
+                <div class="card-body">
+                    <div class="row mx-auto">
+                        <div *ngFor="let p of t.partenaires" class="{{'my-auto col-'+p.size}}" >
+                            <img class="logo" src="{{this.service.host+p.Logo?.url}}" alt="icon" >
+                        </div>
+              
+                    </div>
+                   
+                </div>
+              </div>
+              </div>
+        
+        </div>       
+      </div>

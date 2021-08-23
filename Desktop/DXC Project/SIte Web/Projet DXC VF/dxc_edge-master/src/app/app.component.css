@@ -1,0 +1,24 @@
+.divi {
+  margin-top: 90px;
+}
+.cookies {
+  background: #5f249f;
+  position: fixed;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  color: #fff;
+}
+.cookies .acc {
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #5f249f;
+}
+.ref {
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+  background: #00968f;
+}

@@ -1,0 +1,335 @@
+.animate #Layer_2 g[id^="title"] line,
+.animate #cloudIcon,
+#certifIcon,
+#lamp,
+#colabOrg,
+.animate #dataCenterIcon,
+.animate #appIcon,
+.animate #biIcon,
+.animate .cls-44,
+.animate #bp,
+.animate #securityIcon {
+  fill: transparent;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 0;
+  -webkit-animation: dash 4s cubic-bezier(0.8, 0.23, 0.3, 0.2);
+  -o-animation: dash 4s cubic-bezier(0.8, 0.23, 0.3, 0.2);
+  -moz-animation: dash 4s cubic-bezier(0.8, 0.23, 0.3, 0.2);
+  animation: dash 4s cubic-bezier(0.8, 0.23, 0.3, 0.2);
+  -webkit-transition-duration: 1.5s;
+  transition-duration: 1.5s;
+  cursor: pointer;
+}
+#hovCloud ~ #cloudIcon,
+#cloudIcon {
+  fill: #00968f;
+  transition: 0.5s;
+}
+#hovDataCenter ~ #dataCenterIcon,
+#dataCenterIcon {
+  fill: #5f249f;
+  transition: 0.5s;
+}
+#hovApp ~ #appIcon,
+#appIcon {
+  fill: #6cc24a;
+  transition: 0.5s;
+}
+#hovStati ~ #biIcon,
+#biIcon {
+  fill: #000;
+  transition: 0.5s;
+}
+#hovPc ~ .cls-44,
+.cls-44 {
+  fill: #ffcd00;
+  transition: 0.5s;
+}
+#hovBp ~ #bp,
+#bp {
+  fill: #00a3e1;
+  transition: 0.5s;
+}
+#hovSecurity ~ #securityIcon,
+#securityIcon {
+  fill: #ed9b33;
+  transition: 0.5s;
+}
+
+@-webkit-keyframes dash {
+  from {
+    stroke-dashoffset: 400;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.aboutUs-icons svg {
+  width: 124px;
+  height: auto;
+}
+#cc *:not(#hovClient),
+#years *:not(#hovYears) {
+  pointer-events: none;
+}
+
+/********** Years ************ */
+#hovYears:hover ~ #lamp {
+  fill: #000;
+  transition: 0.5s;
+}
+#hovYears:hover ~ #set {
+  animation-name: rotation;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: forwards;
+  transform-origin: 50% 51.5px;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  65% {
+    transform: rotate(355deg);
+  }
+  75% {
+    transform: rotate(344deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+/********** End Years ************ */
+
+/********** Colab ************ */
+#colab #colabOrg {
+  pointer-events: none;
+}
+#colabLeft,
+#colabRight {
+  transform: scale(0);
+}
+#hovColab:hover ~ #colabRight,
+#hovColab:hover ~ #colabLeft {
+  opacity: 0;
+  animation-duration: 450ms;
+  animation-fill-mode: both;
+}
+#hovColab:hover ~ #colabRight {
+  animation-name: fadeInRight;
+  transform-origin: right;
+}
+#hovColab:hover ~ #colabLeft {
+  animation-name: fadeInLeft;
+  transform-origin: left;
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translatex(100px);
+    -moz-transform: translatex(100px);
+    -o-transform: translatex(100px);
+    transform: translatex(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translatex(0);
+    -moz-transform: translatex(0);
+    -o-transform: translatex(0);
+    transform: translatex(0);
+  }
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translatex(-100px);
+    -moz-transform: translatex(-100px);
+    -o-transform: translatex(-100px);
+    transform: translatex(-100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translatex(0);
+    -moz-transform: translatex(0);
+    -o-transform: translatex(0);
+    transform: translatex(0);
+  }
+}
+/********** End Colab ************ */
+
+/* ********* Certif ******* */
+#certifIcon * {
+  pointer-events: none;
+}
+#Certif #flash {
+  transform: scale(0);
+  transform-origin: center;
+  transition: 0.4s;
+}
+#hovCertif:hover ~ #certifIcon #check {
+  fill: #000;
+}
+#hovCertif:hover ~ #flash {
+  transform: scale(1);
+  transition: 0.4s;
+}
+/* ********* End Certif ******* */
+
+/********** Client ************ */
+#cc #hovClient {
+  fill: transparent;
+}
+#stars {
+  transform: scale(0);
+}
+#hovClient:hover ~ #stars {
+  opacity: 0;
+  animation-name: bounceIn;
+  animation-duration: 450ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  transform-origin: center;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translate3d(0, 0, 0);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(0.89);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+}
+.aboutUs-icons {
+  font-family: "GT Walsheim Pro";
+}
+.aboutUs-icons .number {
+  font-family: "GT Walsheim Pro Bold";
+  line-height: 1em;
+  margin-top: 1em;
+  margin-bottom: 5px;
+  color: #ffd800;
+  padding-right: 10px;
+}
+.aboutUs-icons .number .plus {
+  font-size: 4em;
+  font-weight: bold;
+}
+.aboutUs-icons .number .num {
+  font-size: 4em;
+  font-weight: bold;
+}
+
+.aboutUs-icons .titre-1 {
+  font-size: 16px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 10px;
+}
+.aboutUs-icons .titre-2 {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "GT Walsheim Pro Bold";
+  line-height: 18px;
+  width: 80%;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  #lineB,
+  #lineA * {
+    transform: rotate(90deg);
+    transition: 0.4s;
+    transform-origin: center;
+  }
+  /* svg {
+    width: 100vmin;
+    height: 130vmin;
+  } */
+  #cloudIcon {
+    transform: translate(30%, -58%);
+  }
+  #appIcon {
+    transform: translate(15.5%, -28%);
+  }
+  #biIcon {
+    transform: translate(1.5%, 3%);
+  }
+  .cls-44 {
+    transform: translate(-12.5%, 34%);
+  }
+  #bp {
+    transform: translate(-26%, 64%);
+  }
+  #dataCenterIcon {
+    transform: translate(43.81%, -89%);
+  }
+  #securityIcon {
+    transform: translate(-40.19%, 96%);
+  }
+  #titleDC {
+    transform: translate(29.81%, -44%);
+  }
+  #titleCloud {
+    transform: translate(45.81%, -107%);
+  }
+  #titleAps {
+    transform: translate(2%, 17%);
+  }
+  #titleBI {
+    transform: translate(18%, -45%);
+  }
+  #titleWM {
+    transform: translate(-29%, 79%);
+  }
+  #titleBP {
+    transform: translate(-11%, 17%);
+  }
+  #titleSE {
+    transform: translate(-53%, 141%);
+  }
+  #ambitisionIcons #Layer_2 {
+    transform: translate(-15%, -9%) scale(1.2);
+  }
+  #cloudIcon,
+  #appIcon,
+  #biIcon,
+  .cls-44,
+  #bp,
+  #dataCenterIcon,
+  #securityIcon,
+  #titleDC,
+  #titleCloud,
+  #titleAps,
+  #titleBI,
+  #titleWM,
+  #titleBP,
+  #titleSE {
+    transition: 1s;
+    transform-origin: center;
+  }
+  path[data-name="point"],
+  line[data-name="link"],
+  line#link,
+  path#point,
+  ellipse[id^="hov"] {
+    display: none;
+  }
+}
