@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/contactus",
+      "handler": "contactus.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/contactus",
+      "handler": "contactus.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/contactus",
+      "handler": "contactus.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

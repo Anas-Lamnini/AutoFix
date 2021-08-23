@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "type_de_partenaires",
+  "info": {
+    "name": "Type_De_Partenaires"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nom": {
+      "type": "string"
+    },
+    "Logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "partenaires": {
+      "via": "type_de_partenaire",
+      "collection": "partenaire"
+    }
+  }
+}

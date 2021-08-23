@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "communique_de_presses",
+  "info": {
+    "name": "communique_de_presse",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titre": {
+      "type": "string"
+    },
+    "journaliste": {
+      "type": "string"
+    },
+    "publication_date": {
+      "type": "date"
+    },
+    "publisher": {
+      "type": "string"
+    },
+    "article": {
+      "type": "richtext"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

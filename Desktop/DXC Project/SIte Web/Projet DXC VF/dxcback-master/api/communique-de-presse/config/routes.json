@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/communique-de-presses",
+      "handler": "communique-de-presse.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/communique-de-presses/count",
+      "handler": "communique-de-presse.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/communique-de-presses/:id",
+      "handler": "communique-de-presse.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/communique-de-presses",
+      "handler": "communique-de-presse.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/communique-de-presses/:id",
+      "handler": "communique-de-presse.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/communique-de-presses/:id",
+      "handler": "communique-de-presse.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

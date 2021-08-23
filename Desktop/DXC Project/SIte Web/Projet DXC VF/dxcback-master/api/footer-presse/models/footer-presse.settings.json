@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "footer_presses",
+  "info": {
+    "name": "footer_presse"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "presse1": {
+      "model": "communique-de-presse"
+    },
+    "presse2": {
+      "model": "communique-de-presse"
+    }
+  }
+}

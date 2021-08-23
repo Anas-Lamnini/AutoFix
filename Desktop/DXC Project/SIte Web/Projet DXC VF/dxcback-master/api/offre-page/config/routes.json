@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/offre-page",
+      "handler": "offre-page.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/offre-page",
+      "handler": "offre-page.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/offre-page",
+      "handler": "offre-page.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

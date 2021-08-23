@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/footer-presse",
+      "handler": "footer-presse.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/footer-presse",
+      "handler": "footer-presse.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/footer-presse",
+      "handler": "footer-presse.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

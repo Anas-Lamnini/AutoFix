@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "certifications",
+  "info": {
+    "name": "Certification"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nom": {
+      "type": "string"
+    },
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "type_de_certification": {
+      "via": "certifications",
+      "model": "type-de-certification"
+    }
+  }
+}

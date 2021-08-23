@@ -1,0 +1,16 @@
+{
+    "routes": [
+      {
+        "method": "POST",
+        "path": "/contacteznous",
+        "handler": "Email.send1",
+        "config": {}
+      },
+      {
+        "method": "POST",
+        "path": "/condidature",
+        "handler": "Email.send2",
+        "config": {}
+      }
+    ]
+  }

@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contacts",
+  "info": {
+    "name": "contacts",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "prenom": {
+      "type": "string"
+    },
+    "nom": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "telephone": {
+      "type": "string"
+    },
+    "entreprise": {
+      "type": "string"
+    },
+    "fonction": {
+      "type": "string"
+    },
+    "sujet": {
+      "type": "string"
+    },
+    "relation_avec_dxc": {
+      "type": "string"
+    },
+    "commentaire": {
+      "type": "text"
+    }
+  }
+}

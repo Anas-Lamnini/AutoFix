@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/certif-tech",
+      "handler": "certif-tech.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/certif-tech",
+      "handler": "certif-tech.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/certif-tech",
+      "handler": "certif-tech.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

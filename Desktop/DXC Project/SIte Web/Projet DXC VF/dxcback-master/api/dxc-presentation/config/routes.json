@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/dxc-presentation",
+      "handler": "dxc-presentation.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/dxc-presentation",
+      "handler": "dxc-presentation.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/dxc-presentation",
+      "handler": "dxc-presentation.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

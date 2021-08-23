@@ -1,0 +1,84 @@
+{
+  "kind": "collectionType",
+  "collectionName": "offres",
+  "info": {
+    "name": "Offre",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titre": {
+      "type": "string"
+    },
+    "reference": {
+      "type": "integer"
+    },
+    "publiee_du": {
+      "type": "date"
+    },
+    "publiee_au": {
+      "type": "date"
+    },
+    "Niveau_d_experience": {
+      "type": "enumeration",
+      "enum": [
+        "Senior",
+        "Confirme",
+        "Junior"
+      ]
+    },
+    "niveau_d_education": {
+      "type": "enumeration",
+      "enum": [
+        "Niveau_Bac",
+        "Bac",
+        "Bac_plus_1",
+        "Bac_plus_2",
+        "Bac_plus_3",
+        "Bac_plus_4",
+        "Bac_plus_5"
+      ]
+    },
+    "Localisation": {
+      "type": "enumeration",
+      "enum": [
+        "Technopolis",
+        "Casa_Nearshore"
+      ]
+    },
+    "type_de_contrat": {
+      "type": "enumeration",
+      "enum": [
+        "CDI",
+        "CDD",
+        "Freelance"
+      ]
+    },
+    "Nombre_de_poste": {
+      "type": "integer"
+    },
+    "email_postulation": {
+      "type": "email"
+    },
+    "offre": {
+      "type": "richtext"
+    },
+    "icone": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

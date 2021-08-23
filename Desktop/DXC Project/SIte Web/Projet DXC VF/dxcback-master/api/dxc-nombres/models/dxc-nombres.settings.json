@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dxc_nombres",
+  "info": {
+    "name": "dxc_nombres",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titre": {
+      "type": "string"
+    },
+    "nombre": {
+      "type": "integer"
+    },
+    "order": {
+      "type": "integer"
+    },
+    "sous_titre": {
+      "type": "richtext"
+    }
+  }
+}

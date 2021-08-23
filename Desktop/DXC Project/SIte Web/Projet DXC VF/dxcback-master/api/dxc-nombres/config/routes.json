@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/dxc-nombres",
+      "handler": "dxc-nombres.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/dxc-nombres/count",
+      "handler": "dxc-nombres.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/dxc-nombres/:id",
+      "handler": "dxc-nombres.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/dxc-nombres",
+      "handler": "dxc-nombres.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/dxc-nombres/:id",
+      "handler": "dxc-nombres.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/dxc-nombres/:id",
+      "handler": "dxc-nombres.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
