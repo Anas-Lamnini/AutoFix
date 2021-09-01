@@ -1,0 +1,16 @@
+{
+    "routes": [
+      {
+        "method": "POST",
+        "path": "/emailadhesion",
+        "handler": "Email.send1",
+        "config": {}
+      },
+      {
+        "method": "POST",
+        "path": "/emailcareer",
+        "handler": "Email.send2",
+        "config": {}
+      }
+    ]
+  }

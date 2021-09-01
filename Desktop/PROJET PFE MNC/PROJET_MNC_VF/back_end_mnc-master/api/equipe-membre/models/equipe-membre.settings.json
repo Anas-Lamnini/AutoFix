@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "equipe_membres",
+  "info": {
+    "name": "equipe_membre"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nom": {
+      "type": "string"
+    },
+    "prenom": {
+      "type": "string"
+    },
+    "linkedin_url": {
+      "type": "string"
+    },
+    "bio_fr": {
+      "type": "text"
+    },
+    "bio_en": {
+      "type": "text"
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bareme_des_cotisations",
+  "info": {
+    "name": "Bareme_des_cotisation",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Categorie_membre_fr": {
+      "type": "string"
+    },
+    "Categorie_membre_en": {
+      "type": "string"
+    },
+    "Cotisation": {
+      "type": "string"
+    },
+    "Cotisation_de_soutien": {
+      "type": "string"
+    }
+  }
+}

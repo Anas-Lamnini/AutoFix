@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/liste-des-emails",
+      "handler": "liste-des-email.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/liste-des-emails/count",
+      "handler": "liste-des-email.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/liste-des-emails/:id",
+      "handler": "liste-des-email.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/liste-des-emails",
+      "handler": "liste-des-email.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/liste-des-emails/:id",
+      "handler": "liste-des-email.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/liste-des-emails/:id",
+      "handler": "liste-des-email.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "mnc_numbers",
+  "info": {
+    "name": "Mnc_numbers",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "projets_accompagnes": {
+      "type": "integer"
+    },
+    "partenariats_internationaux": {
+      "type": "integer"
+    },
+    "membres": {
+      "type": "integer"
+    },
+    "evenements_realises": {
+      "type": "integer"
+    },
+    "millions_d_investissement_realises": {
+      "type": "integer"
+    },
+    "description_mnc_fr": {
+      "type": "richtext"
+    },
+    "description_mnc_en": {
+      "type": "richtext"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "partenaires_logo_urls",
+  "info": {
+    "name": "partenaires_logo_url"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "url": {
+      "type": "string"
+    },
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "partenaire": {
+      "via": "partenaires_logo_urls",
+      "model": "partenaiire"
+    }
+  }
+}

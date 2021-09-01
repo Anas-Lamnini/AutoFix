@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "accueil_actualites",
+  "info": {
+    "name": "accueil_actualités",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "actualites": {
+      "collection": "actualite"
+    },
+    "evenements": {
+      "collection": "evenement"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pourquoi_nous_rejoindres",
+  "info": {
+    "name": "Pourquoi_nous_rejoindre"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "icone": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "titre_fr": {
+      "type": "string"
+    },
+    "titre_en": {
+      "type": "string"
+    },
+    "description_fr": {
+      "type": "text"
+    },
+    "description_en": {
+      "type": "text"
+    }
+  }
+}

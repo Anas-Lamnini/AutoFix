@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "actualites",
+  "info": {
+    "name": "actualite",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "titre_fr": {
+      "type": "string"
+    },
+    "titre_en": {
+      "type": "string"
+    },
+    "post_fr": {
+      "type": "richtext"
+    },
+    "post_en": {
+      "type": "richtext"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Blog",
+        "Communique_de_presse"
+      ]
+    },
+    "date": {
+      "type": "date"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/pourquoi-nous-rejoindres",
+      "handler": "pourquoi-nous-rejoindre.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pourquoi-nous-rejoindres/count",
+      "handler": "pourquoi-nous-rejoindre.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pourquoi-nous-rejoindres/:id",
+      "handler": "pourquoi-nous-rejoindre.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/pourquoi-nous-rejoindres",
+      "handler": "pourquoi-nous-rejoindre.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/pourquoi-nous-rejoindres/:id",
+      "handler": "pourquoi-nous-rejoindre.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/pourquoi-nous-rejoindres/:id",
+      "handler": "pourquoi-nous-rejoindre.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

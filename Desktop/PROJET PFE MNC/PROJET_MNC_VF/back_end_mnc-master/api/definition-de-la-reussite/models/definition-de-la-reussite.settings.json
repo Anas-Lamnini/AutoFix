@@ -1,0 +1,50 @@
+{
+  "kind": "singleType",
+  "collectionName": "definition_de_la_reussites",
+  "info": {
+    "name": "definition_de_la_reussite",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "ligne1_fr": {
+      "type": "string"
+    },
+    "ligne1_en": {
+      "type": "string"
+    },
+    "ligne2_fr": {
+      "type": "string"
+    },
+    "ligne2_en": {
+      "type": "string"
+    },
+    "ligne3_fr": {
+      "type": "string"
+    },
+    "ligne3_en": {
+      "type": "string"
+    },
+    "ligne4_fr": {
+      "type": "string"
+    },
+    "ligne4_en": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

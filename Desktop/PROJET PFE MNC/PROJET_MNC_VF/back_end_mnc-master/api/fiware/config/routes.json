@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/fiwares",
+      "handler": "fiware.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/fiwares/count",
+      "handler": "fiware.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/fiwares/:id",
+      "handler": "fiware.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/fiwares",
+      "handler": "fiware.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/fiwares/:id",
+      "handler": "fiware.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/fiwares/:id",
+      "handler": "fiware.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

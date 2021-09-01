@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/bareme-des-cotisations",
+      "handler": "bareme-des-cotisation.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/bareme-des-cotisations/count",
+      "handler": "bareme-des-cotisation.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/bareme-des-cotisations/:id",
+      "handler": "bareme-des-cotisation.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/bareme-des-cotisations",
+      "handler": "bareme-des-cotisation.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/bareme-des-cotisations/:id",
+      "handler": "bareme-des-cotisation.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/bareme-des-cotisations/:id",
+      "handler": "bareme-des-cotisation.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

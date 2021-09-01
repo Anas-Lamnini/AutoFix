@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "footer_actualites",
+  "info": {
+    "name": "footer_actualites"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "actualite1": {
+      "model": "actualite"
+    },
+    "actualite2": {
+      "model": "actualite"
+    },
+    "actualite3": {
+      "model": "actualite"
+    },
+    "actualite4": {
+      "model": "actualite"
+    }
+  }
+}

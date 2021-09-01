@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "liste_des_emails",
+  "info": {
+    "name": "email",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "email": {
+      "type": "email",
+      "unique": true
+    }
+  }
+}

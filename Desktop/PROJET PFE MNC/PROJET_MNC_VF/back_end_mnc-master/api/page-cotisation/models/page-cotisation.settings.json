@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_cotisations",
+  "info": {
+    "name": "page_cotisation"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Payement": {
+      "type": "text"
+    },
+    "Remarques_fr": {
+      "type": "richtext"
+    },
+    "Remarques_en": {
+      "type": "richtext"
+    }
+  }
+}

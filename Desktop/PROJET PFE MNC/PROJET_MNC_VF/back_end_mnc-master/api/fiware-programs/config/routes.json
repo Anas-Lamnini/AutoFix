@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/fiware-programs",
+      "handler": "fiware-programs.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/fiware-programs",
+      "handler": "fiware-programs.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/fiware-programs",
+      "handler": "fiware-programs.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

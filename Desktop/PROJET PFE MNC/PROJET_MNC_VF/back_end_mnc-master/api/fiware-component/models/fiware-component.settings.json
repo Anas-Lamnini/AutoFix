@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fiware_components",
+  "info": {
+    "name": "fiware_component"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "titre_fr": {
+      "type": "string"
+    },
+    "titre_en": {
+      "type": "string"
+    },
+    "hint_fr": {
+      "type": "string"
+    },
+    "hint_en": {
+      "type": "string"
+    },
+    "description_en": {
+      "type": "text"
+    },
+    "description_fr": {
+      "type": "text"
+    },
+    "icon": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

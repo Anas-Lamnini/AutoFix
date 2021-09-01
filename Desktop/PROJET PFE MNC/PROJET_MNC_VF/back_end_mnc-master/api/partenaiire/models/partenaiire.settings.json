@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "partenaiires",
+  "info": {
+    "name": "Partenaire",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "type_fr": {
+      "type": "string"
+    },
+    "type_en": {
+      "type": "string"
+    },
+    "partenaires_logo_urls": {
+      "collection": "partenaires-logo-url",
+      "via": "partenaire"
+    }
+  }
+}

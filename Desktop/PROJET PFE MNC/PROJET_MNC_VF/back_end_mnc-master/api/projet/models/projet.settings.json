@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projets",
+  "info": {
+    "name": "projet",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "titre_fr": {
+      "type": "string"
+    },
+    "titre_en": {
+      "type": "string"
+    },
+    "description_fr": {
+      "type": "text"
+    },
+    "description_en": {
+      "type": "text"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "icon": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

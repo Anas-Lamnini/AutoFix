@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "fiware_programs",
+  "info": {
+    "name": "fiware_programs",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "description_fr": {
+      "type": "text"
+    },
+    "description_en": {
+      "type": "text"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

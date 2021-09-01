@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fiware_sectors",
+  "info": {
+    "name": "fiware_sector"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "label_fr": {
+      "type": "string"
+    },
+    "label_en": {
+      "type": "string"
+    },
+    "icon": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

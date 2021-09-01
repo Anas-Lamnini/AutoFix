@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/definition-de-la-reussite",
+      "handler": "definition-de-la-reussite.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/definition-de-la-reussite",
+      "handler": "definition-de-la-reussite.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/definition-de-la-reussite",
+      "handler": "definition-de-la-reussite.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

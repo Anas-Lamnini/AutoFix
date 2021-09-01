@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fiwares",
+  "info": {
+    "name": "fiware",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Titre_fr": {
+      "type": "string"
+    },
+    "Titre_en": {
+      "type": "string"
+    },
+    "hint_fr": {
+      "type": "string"
+    },
+    "hint_en": {
+      "type": "string"
+    },
+    "Description_fr": {
+      "type": "text"
+    },
+    "Description_en": {
+      "type": "text"
+    },
+    "icon": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

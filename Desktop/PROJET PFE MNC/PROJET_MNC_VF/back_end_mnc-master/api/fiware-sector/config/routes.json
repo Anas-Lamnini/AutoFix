@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/fiware-sectors",
+      "handler": "fiware-sector.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/fiware-sectors/count",
+      "handler": "fiware-sector.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/fiware-sectors/:id",
+      "handler": "fiware-sector.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/fiware-sectors",
+      "handler": "fiware-sector.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/fiware-sectors/:id",
+      "handler": "fiware-sector.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/fiware-sectors/:id",
+      "handler": "fiware-sector.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

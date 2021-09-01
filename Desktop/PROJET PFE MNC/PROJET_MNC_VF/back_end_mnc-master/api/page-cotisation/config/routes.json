@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/page-cotisation",
+      "handler": "page-cotisation.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/page-cotisation",
+      "handler": "page-cotisation.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/page-cotisation",
+      "handler": "page-cotisation.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

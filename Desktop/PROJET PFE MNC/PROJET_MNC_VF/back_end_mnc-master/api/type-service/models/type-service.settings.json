@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "type_services",
+  "info": {
+    "name": "type_service",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "intitule_fr": {
+      "type": "string"
+    },
+    "intitule_en": {
+      "type": "string"
+    },
+    "services": {
+      "collection": "service",
+      "via": "type_service"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

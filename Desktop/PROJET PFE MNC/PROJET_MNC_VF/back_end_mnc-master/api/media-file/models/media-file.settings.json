@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "media_files",
+  "info": {
+    "name": "Media_file",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name_fr": {
+      "type": "string"
+    },
+    "url_youtube": {
+      "type": "string"
+    },
+    "media_content": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "media_thumbnail": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "image",
+        "video_youtube",
+        "video"
+      ]
+    },
+    "name_en": {
+      "type": "string"
+    }
+  }
+}

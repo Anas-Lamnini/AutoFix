@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/emaillistes",
+      "handler": "emailliste.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/emaillistes/count",
+      "handler": "emailliste.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/emaillistes/:id",
+      "handler": "emailliste.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/emaillistes/:lg",
+      "handler": "emailliste.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/emaillistes/:id",
+      "handler": "emailliste.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/emaillistes/:id",
+      "handler": "emailliste.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

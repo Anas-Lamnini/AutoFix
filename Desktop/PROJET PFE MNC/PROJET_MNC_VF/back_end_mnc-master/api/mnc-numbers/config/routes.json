@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/mnc-numbers",
+      "handler": "mnc-numbers.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/mnc-numbers",
+      "handler": "mnc-numbers.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/mnc-numbers",
+      "handler": "mnc-numbers.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
